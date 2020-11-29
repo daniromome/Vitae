@@ -1,6 +1,27 @@
-<div class="left">
-    <app-about-me></app-about-me>
-</div>
-<div>
-    
+<div class= "main">
+    <div class="left">
+        <div class="about-me">
+            <app-about-me></app-about-me>
+        </div>
+    </div>
+    <div class="right">
+        <div>
+            <img src="../../assets/buddy.svg">
+            <h1 class="mat-display-4">Vitae</h1>
+            <h4 class="mat-display-1">Identity and Career.</h4>
+            <div class="powered">
+                <p class="vitae-caption">Powered by</p>
+                <div>
+                    <img src="../../assets/poweredby/angular.svg" (click)="newTab('https://angular.io')">
+                    <img src="../../assets/poweredby/material-design.svg" (click)="newTab('https://material.io')">
+                    <img src="../../assets/poweredby/language-typescript.svg" (click)="newTab('https://www.typescriptlang.org')">
+                    <img src="../../assets/poweredby/aws.svg" (click)="newTab('https://aws.amazon.com/')">
+                    <img src="../../assets/poweredby/nodejs.svg" (click)="newTab('https://nodejs.org')">
+                    <img src="../../assets/poweredby/leaf.svg" (click)="newTab('https://www.mongodb.com')">
+                    <img src="../../assets/poweredby/github.svg" (click)="newTab('https://github.com')">
+                </div>
+                <p class="vitae-caption">Developed by <a href="https://dani9oo.dev">Dani9oo</a></p>
+            </div>
+        </div>
+    </div>
 </div>
