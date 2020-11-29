@@ -1,91 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap");
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 // Defining our own color pallete.
 $dani9oo-primary: (
-  50: #fbe9e7,
-  100: #ffc7d2,
-  200: #f98e98,
-  300: #f25e6f,
-  400: #fe254b,
-  500: #ff0030,
-  600: #f30030,
-  700: #e0002a,
-  800: #d30023,
-  900: #c40016,
-  A100: #ffc7c7,
-  A200: #f98e8e,
-  A400: #fe2525,
-  A700: #e00000,
+  50: #fdecee,
+  100: #fbcfd4,
+  200: #f9afb7,
+  300: #f68e9a,
+  400: #f47685,
+  500: #f25e6f,
+  600: #f05667,
+  700: #ee4c5c,
+  800: #ec4252,
+  900: #e83140,
+  A100: #ffffff,
+  A200: #fff9f9,
+  A400: #ffc6ca,
+  A700: #ffadb2,
   contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $light-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $dark-primary-text,
-    A400: $light-primary-text,
-    A700: $light-primary-text,
-  )
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
 );
 
 $dani9oo-accent: (
-  50: #c8fff4,
-  100: #70efde,
-  200: #03dac5,
-  300: #00c4b4,
-  400: #00b3a6,
-  500: #01a299,
-  600: #019592,
-  700: #018786,
-  800: #017374,
-  900: #005457,
-  A100: #70efde,
-  A200: #03dac5,
-  A400: #00b3a6,
-  A700: #018786,
+  50: #e1fbf8,
+  100: #b3f4ee,
+  200: #81ede2,
+  300: #4fe5d6,
+  400: #29e0ce,
+  500: #03dac5,
+  600: #03d6bf,
+  700: #02d0b8,
+  800: #02cbb0,
+  900: #01c2a3,
+  A100: #ebfffb,
+  A200: #b8fff2,
+  A400: #85ffe9,
+  A700: #6bffe4,
   contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $light-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $dark-primary-text,
-    A400: $light-primary-text,
-    A700: $light-primary-text,
-  )
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
 );
 
 $custom-typography: mat-typography-config(
-  $font-family: 'Playfair Display',
-  $display-4:     mat-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
-  $display-3:     mat-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
-  $display-2:     mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
-  $display-1:     mat-typography-level(34px, 40px, 400),
-  $headline:      mat-typography-level(24px, 32px, 400),
-  $title:         mat-typography-level(20px, 32px, 500),
-  $subheading-2:  mat-typography-level(16px, 28px, 400),
-  $subheading-1:  mat-typography-level(15px, 24px, 400),
-  $body-2:        mat-typography-level(14px, 24px, 500, 'Lato'),
-  $body-1:        mat-typography-level(14px, 20px, 400, 'Lato'),
-  $caption:       mat-typography-level(12px, 20px, 400, 'Lato'),
-  $button:        mat-typography-level(14px, 14px, 500, 'Lato'),
-  $input:         mat-typography-level(inherit, 1.125, 400, 'Lato')
+  $font-family: "Playfair Display",
+  $display-4: mat-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $display-3: mat-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $display-2: mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $display-1: mat-typography-level(34px, 40px, 400),
+  $headline: mat-typography-level(24px, 32px, 400),
+  $title: mat-typography-level(20px, 32px, 500),
+  $subheading-2: mat-typography-level(16px, 28px, 400),
+  $subheading-1: mat-typography-level(15px, 24px, 400),
+  $body-2: mat-typography-level(14px, 24px, 500, "Lato"),
+  $body-1: mat-typography-level(14px, 20px, 400, "Lato"),
+  $caption: mat-typography-level(12px, 20px, 400, "Lato"),
+  $button: mat-typography-level(14px, 14px, 500, "Lato"),
+  $input: mat-typography-level(inherit, 1.125, 400, "Lato"),
 );
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -104,13 +103,15 @@ $Vitae-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$Vitae-theme: mat-dark-theme((
-  color: (
-    primary: $Vitae-primary,
-    accent: $Vitae-accent,
-    warn: $Vitae-warn,
+$Vitae-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $Vitae-primary,
+      accent: $Vitae-accent,
+      warn: $Vitae-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -119,6 +120,21 @@ $Vitae-theme: mat-dark-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; background-color: #121212; }
-body { margin: 0; font-family: Lato, "Helvetica Neue", sans-serif; }
-mat-card-content { @extend .mat-body }
+html,
+body {
+  height: 100%;
+  background-color: #121212;
+}
+body {
+  margin: 0;
+  font-family: Lato, "Helvetica Neue", sans-serif;
+}
+mat-card-content {
+  @extend .mat-body;
+}
+.vitae-caption {
+  @extend .mat-caption;
+  text-transform: uppercase;
+  color: rgba($color: #ffffff, $alpha: 0.6);
+  max-height: 12px;
+}
