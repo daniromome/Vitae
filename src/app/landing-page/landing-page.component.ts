@@ -12,4 +12,8 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  newTab(url: string): void {
+    window.open(url, '_blank');
+  }
+
 }
