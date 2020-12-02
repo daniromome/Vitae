@@ -1,3 +1,4 @@
+import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
@@ -15,7 +16,8 @@ import { SkillsComponent } from './skills/skills.component';
     CommonModule,
     LandingPageRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule
   ]
 })
 export class LandingPageModule { }
