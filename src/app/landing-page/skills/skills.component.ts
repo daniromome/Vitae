@@ -1,4 +1,7 @@
+import { Skill } from './skill.interface';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Observable } from 'rxjs';
+import { SkillsService } from './skills.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,9 +11,14 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  skills$: Observable<Skill[]>;
+
+  constructor(private skillsService: SkillsService) {
+    this.skills$ = this.skillsService.getSkills();
+  }
 
   ngOnInit(): void {
+
   }
 
 }

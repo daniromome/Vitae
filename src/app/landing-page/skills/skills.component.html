@@ -1,1 +1,12 @@
-<p>skills works!</p>
+<mat-card>
+    <div class='vitae-card'>
+        <h1 class='mat-display-3'>Skills</h1>
+    </div>
+    <mat-list *ngIf='(skills$ | async) as skills'>
+        <mat-list-item *ngFor='let skill of skills'>
+            <mat-icon svgIcon='skill.icon' mat-list-icon></mat-icon>
+            <div mat-line>{{skill.language}}</div>
+            <div mat-line>{{skill.expertise}}/5</div>
+        </mat-list-item>
+    </mat-list>
+</mat-card>
