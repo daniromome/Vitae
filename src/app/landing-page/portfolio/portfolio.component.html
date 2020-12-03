@@ -1,0 +1,15 @@
+<mat-card>
+  <div class="vitae-card">
+    <h1 class="mat-display-3">Portfolio</h1>
+  </div>
+  <mat-card-content>
+    <div [class.mat-elevation-z]="true" *ngFor="let project of projects$ | async">
+      <img src="{{project.image}}" class="project-image clickable" (click)='newTab(project.url)'>
+      <div class="max-width">
+        <h1 class='mat-headline'>{{ project.title }}</h1>
+        <p>{{ project.summary }}</p>
+        <mat-icon svgIcon="github" class='clickable' (click)='newTab(project.repository)'></mat-icon>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,58 @@
+.vitae-card {
+    padding: 14px !important;
+    max-height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+mat-card-content > div {
+    margin: auto;
+    padding: 20px;
+    background-color: #1C1C1C;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-content > div > img {
+    max-height: 120px;
+    // margin: 20px;
+    border-radius: 5px;
+}
+
+mat-card-content > div > div {
+    margin: 20px;
+}
+
+@media only screen and (min-width: 768px) { 
+    mat-card-content > div {
+        flex-direction: row;
+    }
+
+    mat-card-content {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+        padding: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    mat-card-content > div {
+        flex-direction: column;
+    }
+
+    mat-card-content {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        padding: 15px 0;
+        text-align: center;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+}
