@@ -1,9 +1,21 @@
-.vitae-card {
-    padding: 14px !important;
-    max-height: 56px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+@media only screen and (min-width: 398px) {
+    .vitae-card {
+        padding: 14px !important;
+        max-height: 56px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 398px) {
+    .vitae-card {
+        padding: 14px !important;
+        max-height: 102px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 p {
