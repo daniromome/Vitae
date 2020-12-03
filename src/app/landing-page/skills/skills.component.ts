@@ -14,7 +14,7 @@ export class SkillsComponent implements OnInit {
   skills$: Observable<Skill[]>;
 
   constructor(private skillsService: SkillsService) {
-    this.skills$ = this.skillsService.getSkills();
+    this.skills$ = this.skillsService.getSkills;
   }
 
   ngOnInit(): void {

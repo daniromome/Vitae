@@ -5,3 +5,22 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+mat-card-content {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
+    padding: 15px 0;
+}
+
+mat-card-content > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin: auto;
+}
+
+.language-icon {
+    margin-right: 15px;
+}
