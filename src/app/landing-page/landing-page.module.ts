@@ -1,3 +1,5 @@
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -19,7 +21,9 @@ import { ContactComponent } from './contact/contact.component';
     LandingPageRoutingModule,
     MatCardModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class LandingPageModule { }
