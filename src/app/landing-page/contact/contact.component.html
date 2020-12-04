@@ -1,27 +1,45 @@
 <div>
   <h4 class="mat-display-1">Business Inquiries</h4>
-  <div >
-    <div class="max-width">
-      <mat-form-field appearance="outline">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Provide your forename" />
-        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint> -->
+  <div>
+    <form [formGroup]="form">
+      <div class="max-width">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Provide your forename" [formControl]="name"/>
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="I will be contacting you using this medium" [formControl]="email"/>
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="outline" class="max-width">
+        <mat-label>Inquiry</mat-label>
+        <textarea matInput placeholder="Your message" [formControl]="inquiry"></textarea>
+        <!--  <mat-hint>Hint</mat-hint> -->
       </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Email</mat-label>
-        <input matInput placeholder="I will be contacting you using this medium" />
-        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint> -->
-      </mat-form-field>
-    </div>
-    <mat-form-field appearance="outline" class="max-width">
-      <mat-label>Inquiry</mat-label>
-      <textarea matInput placeholder="Your message"></textarea>
-      <!--  <mat-hint>Hint</mat-hint> -->
-    </mat-form-field>
-    <button mat-raised-button color="primary">
-      <mat-icon svgIcon="send"></mat-icon>
-    </button>
+      <div *ngIf="(timeLeft$ | async) as timeLeft; else default" >
+        <button mat-raised-button color="primary" *ngIf="!form.valid && timeLeft === 0" disabled>
+          <mat-icon svgIcon="send"></mat-icon>
+        </button>
+        <button mat-raised-button color="primary" *ngIf="timeLeft !== 0" disabled>
+          {{ timeLeft }}
+        </button>
+        <button mat-raised-button color="primary" *ngIf="form.valid && timeLeft === 0" (click)="submit(form.value)">
+          <mat-icon svgIcon="send"></mat-icon>
+        </button>
+      </div>
+      <ng-template #default >
+        <button mat-raised-button color="primary" *ngIf="!form.valid" disabled>
+          <mat-icon svgIcon="send"></mat-icon>
+        </button>
+        <button mat-raised-button color="primary" *ngIf="form.valid" (click)="submit(form.value)">
+          <mat-icon svgIcon="send"></mat-icon>
+        </button>
+      </ng-template>
+    </form>
   </div>
 </div>
