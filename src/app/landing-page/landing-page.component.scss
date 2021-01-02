@@ -46,18 +46,18 @@ h4 {
     margin: auto;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     .left, .right {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 70px;
     }
-    
+
     .left {
         min-width: 52.1875%;
     }
-    
+
     .main {
         display: flex;
         flex-direction: row;
@@ -67,18 +67,18 @@ h4 {
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     .left, .right {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 30px;
     }
-    
+
     .left {
         max-width: 100%;
     }
-    
+
     .main {
         display: flex;
         flex-direction: column;

@@ -24,7 +24,7 @@ textarea {
     resize: none !important;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     div > div > form {
         flex-direction: row;
         gap: 30px;
@@ -34,7 +34,7 @@ textarea {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     div > div > form {
         flex-direction: column;
         gap: 15px;
