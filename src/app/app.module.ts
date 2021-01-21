@@ -1,20 +1,22 @@
 import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Inject, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformServer } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent
    ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -24,9 +26,11 @@ import { DomSanitizer } from '@angular/platform-browser';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(iconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
+  constructor(private iconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, @Inject(PLATFORM_ID) private platformId: string) {
+    const svgUrl = 'assets/mdi.svg'
+    const domain = (isPlatformServer(platformId)) ? 'http://localhost:4000/' : '';
     iconRegistry.addSvgIconSet(
-      domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg')
+      domSanitizer.bypassSecurityTrustResourceUrl(domain + svgUrl)
     );
   }
 }

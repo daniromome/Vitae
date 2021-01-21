@@ -4,7 +4,7 @@
   </div>
   <mat-card-content>
     <div [class.mat-elevation-z]="true" *ngFor="let project of projects$ | async">
-      <img src="{{project.image}}" class="project-image clickable" (click)='newTab(project.url)'>
+      <img src="{{project.image}}" alt="{{ project.title }} Screenshot" class="project-image clickable" (click)='newTab(project.url)'>
       <div class="max-width">
         <h1 class='mat-headline'>{{ project.title }}</h1>
         <p>{{ project.summary }}</p>

@@ -1,5 +1,5 @@
 <div>
-  <h4 class="mat-display-1">Business Inquiries</h4>
+  <div class="mat-display-1 h4">Business Inquiries</div>
   <div>
     <form [formGroup]="form">
       <div class="max-width">
@@ -23,21 +23,21 @@
       </mat-form-field>
       <div *ngIf="(timeLeft$ | async) as timeLeft; else default" >
         <button mat-raised-button color="primary" *ngIf="!form.valid && timeLeft === 0" disabled>
-          <mat-icon svgIcon="send"></mat-icon>
+          <mat-icon svgIcon="send"></mat-icon> <span class="cdk-visually-hidden">Send</span>
         </button>
         <button mat-raised-button color="primary" *ngIf="timeLeft !== 0" disabled>
           {{ timeLeft }}
         </button>
         <button mat-raised-button color="primary" *ngIf="form.valid && timeLeft === 0" (click)="submit(form.value)">
-          <mat-icon svgIcon="send"></mat-icon>
+          <mat-icon svgIcon="send"></mat-icon> <span class="cdk-visually-hidden">Send</span>
         </button>
       </div>
       <ng-template #default >
         <button mat-raised-button color="primary" *ngIf="!form.valid" disabled>
-          <mat-icon svgIcon="send"></mat-icon>
+          <mat-icon svgIcon="send"></mat-icon> <span class="cdk-visually-hidden">Send</span>
         </button>
         <button mat-raised-button color="primary" *ngIf="form.valid" (click)="submit(form.value)">
-          <mat-icon svgIcon="send"></mat-icon>
+          <mat-icon svgIcon="send"></mat-icon> <span class="cdk-visually-hidden">Send</span>
         </button>
       </ng-template>
     </form>
