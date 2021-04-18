@@ -2,6 +2,7 @@
   <div class="vitae-card">
     <h1 class="mat-display-3">Skills</h1>
   </div>
+  <mat-progress-bar *ngIf="(skills$ | async)?.length === 0" mode="query">Loading...</mat-progress-bar>
   <mat-card-content>
     <div *ngFor="let skill of skills$ | async">
         <mat-icon svgIcon="{{ skill.icon }}" class="language-icon"></mat-icon>

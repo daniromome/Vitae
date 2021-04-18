@@ -2,6 +2,7 @@
   <div class="vitae-card">
     <h1 class="mat-display-3">Portfolio</h1>
   </div>
+  <mat-progress-bar *ngIf="(projects$ | async)?.length === 0" mode="query">Loading...</mat-progress-bar>
   <mat-card-content>
     <div [class.mat-elevation-z]="true" *ngFor="let project of projects$ | async">
       <img src="{{project.image}}" alt="{{ project.title }} Screenshot" class="project-image clickable" (click)='newTab(project.url)'>
