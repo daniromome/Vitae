@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { fadeInAnimation, zoomInAnimation } from '../_animations/index';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss']
+  styleUrls: ['./landing-page.component.scss'],
+  animations: [
+    fadeInAnimation(),
+    zoomInAnimation()
+  ]
 })
 export class LandingPageComponent implements OnInit {
 
