@@ -10,27 +10,30 @@ import { Observable } from 'rxjs';
 })
 export class AboutMeComponent implements OnInit {
 
-  ageInSeconds$: Observable<Duration>;
+  ageDuration$: Observable<Duration>;
+  durationStrings = {
+    singular: {
+      year: $localize`year`,
+      month: $localize`month`,
+      day: $localize`day`,
+      hour: $localize`hour`,
+      minute: $localize`minute`,
+      second: $localize`second`,
+    },
+    plural: {
+      year: $localize`years`,
+      month: $localize`months`,
+      day: $localize`days`,
+      hour: $localize`hours`,
+      minute: $localize`minutes`,
+      second: $localize`seconds`,
+    }
+  }
 
   constructor(private aboutMeService: AboutMeService) {
-    this.ageInSeconds$ = this.aboutMeService.getAge;
+    this.ageDuration$ = this.aboutMeService.getAge;
   }
 
-  readableAge(d: Duration | null) {
-    if (!d) return '?';
-    const months = this.getProperAmountNouns(d.months, 'month');
-    const days = this.getProperAmountNouns(d.days, 'day');
-    const minutes = this.getProperAmountNouns(d.minutes, 'minute');
-    const hours = this.getProperAmountNouns(d.hours, 'hour');
-    const seconds = this.getProperAmountNouns(d.seconds, 'second');
-    return `${d.years} years, ${months} ${days} ${hours} ${minutes} and ${seconds} ago`;
-  }
-
-  getProperAmountNouns(value: number | undefined, singular: string) {
-    return value === 0 || value === undefined ? `0 ${singular}s` : value === 1 ? `${value} ${singular}` : `${value} ${singular}s`;
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
