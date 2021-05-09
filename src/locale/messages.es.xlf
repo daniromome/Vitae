@@ -6,7 +6,8 @@
         <note category="location">src/app/landing-page/landing-page.component.html:17</note>
       </notes>
       <segment>
-        <source>Identidad y Experiencia.</source>
+        <source>Identity and Career.</source>
+        <target>Identidad y Experiencia.</target>
       </segment>
     </unit>
     <unit id="7933384538978087776">
@@ -14,7 +15,8 @@
         <note category="location">src/app/landing-page/landing-page.component.html:19</note>
       </notes>
       <segment>
-        <source>Tecnologías utilizadas</source>
+        <source>Powered by</source>
+        <target>Tecnologías utilizadas</target>
       </segment>
     </unit>
     <unit id="842364948971829341">
@@ -22,7 +24,8 @@
         <note category="location">src/app/landing-page/landing-page.component.html:29</note>
       </notes>
       <segment>
-        <source>Desarrollado por Dani9oo</source>
+        <source>Developed by Dani9oo</source>
+        <target>Desarrollado por Dani9oo</target>
       </segment>
     </unit>
     <unit id="6479044529603381727">
@@ -30,7 +33,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:17</note>
       </notes>
       <segment>
-        <source>año</source>
+        <source>year</source>
+        <target>año</target>
       </segment>
     </unit>
     <unit id="7178101913251976451">
@@ -38,7 +42,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:18</note>
       </notes>
       <segment>
-        <source>mes</source>
+        <source>month</source>
+        <target>mes</target>
       </segment>
     </unit>
     <unit id="6320319413541466015">
@@ -46,7 +51,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:19</note>
       </notes>
       <segment>
-        <source>día</source>
+        <source>day</source>
+        <target>día</target>
       </segment>
     </unit>
     <unit id="5689442636734876664">
@@ -54,7 +60,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:20</note>
       </notes>
       <segment>
-        <source>hora</source>
+        <source>hour</source>
+        <target>hora</target>
       </segment>
     </unit>
     <unit id="5405071297219936776">
@@ -62,7 +69,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:21</note>
       </notes>
       <segment>
-        <source>minuto</source>
+        <source>minute</source>
+        <target>minuto</target>
       </segment>
     </unit>
     <unit id="7479425239631237410">
@@ -70,7 +78,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:22</note>
       </notes>
       <segment>
-        <source>segundo</source>
+        <source>second</source>
+        <target>segundo</target>
       </segment>
     </unit>
     <unit id="7658073495909471632">
@@ -78,7 +87,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:25</note>
       </notes>
       <segment>
-        <source>años</source>
+        <source>years</source>
+        <target>años</target>
       </segment>
     </unit>
     <unit id="6169402792391433667">
@@ -86,7 +96,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:26</note>
       </notes>
       <segment>
-        <source>meses</source>
+        <source>months</source>
+        <target>meses</target>
       </segment>
     </unit>
     <unit id="7036284206110282007">
@@ -94,7 +105,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:27</note>
       </notes>
       <segment>
-        <source>días</source>
+        <source>days</source>
+        <target>días</target>
       </segment>
     </unit>
     <unit id="3370839803061654054">
@@ -102,7 +114,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:28</note>
       </notes>
       <segment>
-        <source>horas</source>
+        <source>hours</source>
+        <target>horas</target>
       </segment>
     </unit>
     <unit id="982745398054129955">
@@ -110,7 +123,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:29</note>
       </notes>
       <segment>
-        <source>minutos</source>
+        <source>minutes</source>
+        <target>minutos</target>
       </segment>
     </unit>
     <unit id="227749613426254192">
@@ -118,7 +132,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.ts:30</note>
       </notes>
       <segment>
-        <source>segundos</source>
+        <source>seconds</source>
+        <target>segundos</target>
       </segment>
     </unit>
     <unit id="3562199946446423606">
@@ -126,7 +141,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.html:3</note>
       </notes>
       <segment>
-        <source>Acerca de mi</source>
+        <source>About me</source>
+        <target>Acerca de mí</target>
       </segment>
     </unit>
     <unit id="3459960363289311478">
@@ -134,7 +150,7 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.html:7,49</note>
       </notes>
       <segment>
-        <source> Mi nombre es Daniel Sánchez Nací hace <ph id="0" equiv="INTERPOLATION" disp=" was born
+        <source> My name is Daniel Sánchez I was born <ph id="0" equiv="INTERPOLATION" disp=" was born
           {{ (ageDuration"/> <ph id="1" equiv="INTERPOLATION_1" disp=" | async)?.years }}
           {{ (ageDuration$ | async)?.years | i18nPlural: {
             &apos;=0&apos;: durationStrings.plural.year,
@@ -161,7 +177,35 @@
           } }}
           {{ (ageDuration$ | async)?.minutes}}
           {{ (ageDuration$ | async)?.minutes | i18nPlural: {
-            &apos;=0&apos;: durationStrings."/> y actualmente resido en Jalisco, México trabajando como desarrollador "fullstack" de tiempo completo mientras termino mi carrera de Desarrollo de Software en la Universidad Tecnológica de Jalisco. </source>
+            &apos;=0&apos;: durationStrings."/> ago and I am currently residing within Jalisco, México working fulltime as a fullstack developer while I finish a four year degree in Software Development at the Technological University of Jalisco. </source>
+        <target> Mi nombre es Daniel Sánchez Nací hace <ph id="0" equiv="INTERPOLATION" disp=" was born
+          {{ (ageDuration"/> <ph id="1" equiv="INTERPOLATION_1" disp=" | async)?.years }}
+          {{ (ageDuration$ | async)?.years | i18nPlural: {
+            &apos;=0&apos;: durationStrings.plural.year,
+            &apos;=1&apos;: durationStrings.si"/>, <ph id="2" equiv="INTERPOLATION_2" disp="ular.year,
+            &apos;other&apos;: dur"/> <ph id="3" equiv="INTERPOLATION_3" disp="tionStrings.plural.year
+          } }},
+          {{ (ageDuration$ | async)?.months}}
+          {{ (ageDuration$ | async)?.months | i18nPlural: {
+            &apos;=0&apos;: du"/> <ph id="4" equiv="INTERPOLATION_4" disp="ationStrings.plural.month,
+      "/> <ph id="5" equiv="INTERPOLATION_5" disp="     &apos;=1&apos;: durationStrings.singular.month,
+            &apos;other&apos;: durationStrings.plural.month
+          } }}
+          {{ (ageDuration$ | async)?.days}}
+      "/> <ph id="6" equiv="INTERPOLATION_6" disp="   {{ (ageDuration$ | async)?.days"/> <ph id="7" equiv="INTERPOLATION_7" disp="| i18nPlural: {
+            &apos;=0&apos;: durationStrings.plural.day,
+            &apos;=1&apos;: durationStrings.singular.day,
+            &apos;other&apos;: durationStrings.plural.day
+    "/> <ph id="8" equiv="INTERPOLATION_8" disp="     } }}
+          {{ (ageDuration$"/> <ph id="9" equiv="INTERPOLATION_9" disp="| async)?.hours}}
+          {{ (ageDuration$ | async)?.hours | i18nPlural: {
+            &apos;=0&apos;: durationStrings.plural.hour,
+            &apos;=1&apos;: durationStrings.singular.hou"/> <ph id="10" equiv="INTERPOLATION_10" disp=",
+            &apos;other&apos;: durationString"/> <ph id="11" equiv="INTERPOLATION_11" disp=".plural.hour
+          } }}
+          {{ (ageDuration$ | async)?.minutes}}
+          {{ (ageDuration$ | async)?.minutes | i18nPlural: {
+            &apos;=0&apos;: durationStrings."/> y actualmente resido en Jalisco, México trabajando como desarrollador "fullstack" de tiempo completo mientras termino mi carrera de Desarrollo de Software en la Universidad Tecnológica de Jalisco. </target>
       </segment>
     </unit>
     <unit id="4637131059215374340">
@@ -169,7 +213,8 @@
         <note category="location">src/app/landing-page/about-me/about-me.component.html:51,56</note>
       </notes>
       <segment>
-        <source> Cuando se trata de mi carrera, me considero a mí mismo un entusiasta ya que aprender es una de las actividades que más disfruto hacer. El crecimiento implícito que se siente cuando creo y experimento con nuevas herramientas o incluso masterizo las que ya conozco es algo a que me motiva diariamente</source>
+        <source> When it comes to my career I consider myself an enthusiast since learning is one of the things I enjoy doing the most, the implicit grow that you feel whenever you are thinkering and experimenting with new tools or even mastering ones you already know is something that I look forward to everyday. </source>
+        <target> Cuando se trata de mi carrera, me considero a mí mismo un entusiasta ya que aprender es una de las actividades que más disfruto hacer. El crecimiento implícito que se siente cuando creo y experimento con nuevas herramientas o incluso masterizo las que ya conozco es algo a que me motiva diariamente</target>
       </segment>
     </unit>
     <unit id="4342625008558026850">
@@ -177,7 +222,8 @@
         <note category="location">src/app/landing-page/skills/skills.component.html:3</note>
       </notes>
       <segment>
-        <source>Habilidades</source>
+        <source>Skills</source>
+        <target>Habilidades</target>
       </segment>
     </unit>
     <unit id="9201103587777813545">
@@ -185,7 +231,8 @@
         <note category="location">src/app/landing-page/portfolio/portfolio.component.html:3</note>
       </notes>
       <segment>
-        <source>Portafolio</source>
+        <source>Portfolio</source>
+        <target>Portafolio</target>
       </segment>
     </unit>
     <unit id="5987753917160341504">
@@ -193,7 +240,8 @@
         <note category="location">src/app/landing-page/contact/contact.component.html:2</note>
       </notes>
       <segment>
-        <source>Consultas de Negocios</source>
+        <source>Business Inquiries</source>
+        <target>Consultas de Negocios</target>
       </segment>
     </unit>
     <unit id="8953033926734869941">
@@ -201,7 +249,8 @@
         <note category="location">src/app/landing-page/contact/contact.component.html:7</note>
       </notes>
       <segment>
-        <source>Nombre</source>
+        <source>Name</source>
+        <target>Nombre</target>
       </segment>
     </unit>
     <unit id="5306307007764167128">
@@ -209,7 +258,8 @@
         <note category="location">src/app/landing-page/contact/contact.component.html:8</note>
       </notes>
       <segment>
-        <source>¿Cuál es su primer nombre?</source>
+        <source>Provide your forename</source>
+        <target>¿Cuál es su primer nombre?</target>
       </segment>
     </unit>
     <unit id="4768749765465246664">
@@ -217,7 +267,8 @@
         <note category="location">src/app/landing-page/contact/contact.component.html:13</note>
       </notes>
       <segment>
-        <source>Correo electrónico</source>
+        <source>Email</source>
+        <target>Correo electrónico</target>
       </segment>
     </unit>
     <unit id="1925990792258388422">
@@ -225,7 +276,8 @@
         <note category="location">src/app/landing-page/contact/contact.component.html:14</note>
       </notes>
       <segment>
-        <source>Me pondré en contacto con usted usando este medio.</source>
+        <source>I will be contacting you using this medium</source>
+        <target>Me pondré en contacto con usted usando este medio.</target>
       </segment>
     </unit>
     <unit id="1139720317515214135">
@@ -233,7 +285,8 @@
         <note category="location">src/app/landing-page/contact/contact.component.html:20</note>
       </notes>
       <segment>
-        <source>Consulta</source>
+        <source>Inquiry</source>
+        <target>Consulta</target>
       </segment>
     </unit>
     <unit id="1391056849737890767">
@@ -241,7 +294,8 @@
         <note category="location">src/app/landing-page/contact/contact.component.html:21</note>
       </notes>
       <segment>
-        <source>Su mensaje</source>
+        <source>Your message</source>
+        <target>Su mensaje</target>
       </segment>
     </unit>
     <unit id="6490688569532630280">
@@ -252,7 +306,8 @@
         <note category="location">src/app/landing-page/contact/contact.component.html:40</note>
       </notes>
       <segment>
-        <source>Envíar</source>
+        <source>Send</source>
+        <target>Envíar</target>
       </segment>
     </unit>
   </file>
