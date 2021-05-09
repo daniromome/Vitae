@@ -28,9 +28,9 @@ import { isPlatformServer } from '@angular/common';
 export class AppModule {
   constructor(private iconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, @Inject(PLATFORM_ID) private platformId: string) {
     const svgUrl = 'assets/mdi.svg'
-    const domain = (isPlatformServer(platformId)) ? 'http://localhost:4000/' : '';
-    iconRegistry.addSvgIconSet(
-      domSanitizer.bypassSecurityTrustResourceUrl(domain + svgUrl)
+    const domain = (isPlatformServer(this.platformId)) ? 'http://localhost:4000/' : '';
+    this.iconRegistry.addSvgIconSet(
+      this.domSanitizer.bypassSecurityTrustResourceUrl(domain + svgUrl)
     );
   }
 }
