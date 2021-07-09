@@ -16,7 +16,7 @@ import { isPlatformServer } from '@angular/common';
     AppComponent
    ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

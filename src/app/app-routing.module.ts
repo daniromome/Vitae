@@ -4,9 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [{ path: '', loadChildren: () => import('./landing-page/landing-page.module').then(m => m.LandingPageModule) }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
-})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
