@@ -8,11 +8,6 @@
     align-items: center;
 }
 
-img {
-    max-width: 73%;
-    margin-bottom: 11px;
-}
-
 h1 {
     max-height: 72px;
     color: white;
@@ -22,6 +17,14 @@ h1 {
     max-height: 36px;
     margin-bottom: 30px;
     color: rgba(#ffffff, 60%)
+}
+
+i {
+  font-size: 60px;
+  color: rgba(#ffffff, 60%);
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
 }
 
 .powered {
