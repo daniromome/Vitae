@@ -1,5 +1,6 @@
 @use '~@angular/material' as mat;
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap");
+@import 'mdi/mdi.scss';
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -139,3 +140,10 @@ mat-card-content {
   max-height: 12px;
 }
 .max-width { width: 100%; }
+
+i {
+  font-size: 24px;
+  color: rgba(#ffffff, 100%);
+  text-align: center;
+  width: fit-content;
+}

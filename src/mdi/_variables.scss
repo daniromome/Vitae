@@ -1,0 +1,34 @@
+$mdi-filename:         "mdi";
+$mdi-font-name:        "Material Design Icons";
+$mdi-font-family:      "materialdesignicons";
+$mdi-font-weight:      "normal";
+$mdi-font-path:        "../assets" !default;
+$mdi-font-size-base:   24px !default;
+$mdi-css-prefix:       mdi !default;
+$mdi-version:          "5.9.55" !default;
+
+$mdi-icons: (
+  "angular": F06B2,
+  "aws": F0E0F,
+  "database": F01BC,
+  "dots-square": F15FD,
+  "file-document": F0219,
+  "git": F02A2,
+  "github": F02A4,
+  "language-css3": F031C,
+  "language-html5": F031D,
+  "language-java": F0B37,
+  "language-javascript": F031E,
+  "language-php": F031F,
+  "language-typescript": F06E6,
+  "leaf": F032A,
+  "linkedin": F033B,
+  "material-design": F0986,
+  "nodejs": F0399,
+  "penguin": F0EC0,
+  "puzzle": F0431,
+  "send": F048A,
+  "star": F04CE,
+  "star-half-full": F04D0,
+  "star-outline": F04D2
+);
