@@ -4,12 +4,14 @@
   </div>
   <mat-progress-bar *ngIf="(projects$ | async)?.length === 0" mode="query">Loading...</mat-progress-bar>
   <mat-card-content>
-    <div [class.mat-elevation-z]="true" *ngFor="let project of projects$ | async">
-      <img src="{{project.image}}" alt="{{ project.title }} Screenshot" class="project-image clickable" (click)='newTab(project.url)'>
-      <div class="max-width">
-        <h1 class='mat-headline'>{{ project.title }}</h1>
-        <p>{{ project.summary }}</p>
-        <mat-icon svgIcon="github" class='clickable' (click)='newTab(project.repository)'></mat-icon>
+    <div *ngFor="let project of projects$ | async">
+      <div [class.mat-elevation-z3]="true" class="image" style="background-image: url({{project.image}});"></div>
+      <div class="overlay">
+        <div class="content">
+          <h1 class='mat-headline'><a href="{{project.url}}" target="_blank">{{ project.title }}</a></h1>
+          <p>{{ project.summary }}</p>
+          <i class="mdi mdi-github" (click)='newTab(project.repository)'></i>
+        </div>
       </div>
     </div>
   </mat-card-content>
