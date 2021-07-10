@@ -5,24 +5,24 @@
   <mat-progress-bar *ngIf="(skills$ | async)?.length === 0" mode="query">Loading...</mat-progress-bar>
   <mat-card-content>
     <div *ngFor="let skill of skills$ | async">
-        <mat-icon svgIcon="{{ skill.icon }}" class="language-icon"></mat-icon>
+        <i class="language-icon mdi mdi-{{ skill.icon }}"></i>
         <div>
             <div>{{ skill.language }}</div>
-            <mat-icon svgIcon="star-half-full" *ngIf="skill.expertise === 0.5"></mat-icon>
-            <mat-icon svgIcon="star" *ngIf="skill.expertise >= 1"></mat-icon>
-            <mat-icon svgIcon="star-outline" *ngIf="skill.expertise < 0.5"></mat-icon>
-            <mat-icon svgIcon="star-half-full" *ngIf="skill.expertise === 1.5"></mat-icon>
-            <mat-icon svgIcon="star" *ngIf="skill.expertise >= 2"></mat-icon>
-            <mat-icon svgIcon="star-outline" *ngIf="skill.expertise < 1.5"></mat-icon>
-            <mat-icon svgIcon="star-half-full" *ngIf="skill.expertise === 2.5"></mat-icon>
-            <mat-icon svgIcon="star" *ngIf="skill.expertise >= 3"></mat-icon>
-            <mat-icon svgIcon="star-outline" *ngIf="skill.expertise < 2.5"></mat-icon>
-            <mat-icon svgIcon="star-half-full" *ngIf="skill.expertise === 3.5"></mat-icon>
-            <mat-icon svgIcon="star" *ngIf="skill.expertise >= 4"></mat-icon>
-            <mat-icon svgIcon="star-outline" *ngIf="skill.expertise < 3.5 "></mat-icon>
-            <mat-icon svgIcon="star-half-full" *ngIf="skill.expertise === 4.5"></mat-icon>
-            <mat-icon svgIcon="star" *ngIf="skill.expertise === 5"></mat-icon>
-            <mat-icon svgIcon="star-outline" *ngIf="skill.expertise < 4.5 "></mat-icon>
+            <i class="mdi mdi-star-half-full" *ngIf="skill.expertise === 0.5"></i>
+            <i class="mdi mdi-star" *ngIf="skill.expertise >= 1"></i>
+            <i class="mdi mdi-star-outline" *ngIf="skill.expertise < 0.5"></i>
+            <i class="mdi mdi-star-half-full" *ngIf="skill.expertise === 1.5"></i>
+            <i class="mdi mdi-star" *ngIf="skill.expertise >= 2"></i>
+            <i class="mdi mdi-star-outline" *ngIf="skill.expertise < 1.5"></i>
+            <i class="mdi mdi-star-half-full" *ngIf="skill.expertise === 2.5"></i>
+            <i class="mdi mdi-star" *ngIf="skill.expertise >= 3"></i>
+            <i class="mdi mdi-star-outline" *ngIf="skill.expertise < 2.5"></i>
+            <i class="mdi mdi-star-half-full" *ngIf="skill.expertise === 3.5"></i>
+            <i class="mdi mdi-star" *ngIf="skill.expertise >= 4"></i>
+            <i class="mdi mdi-star-outline" *ngIf="skill.expertise < 3.5 "></i>
+            <i class="mdi mdi-star-half-full" *ngIf="skill.expertise === 4.5"></i>
+            <i class="mdi mdi-star" *ngIf="skill.expertise === 5"></i>
+            <i class="mdi mdi-star-outline" *ngIf="skill.expertise < 4.5 "></i>
         </div>
     </div>
     <!-- <mat-list>
