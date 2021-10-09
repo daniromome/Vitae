@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://api.dani9oo.dev'
+  apiUrl: 'https://api.vitae.daniromo.me'
 };
