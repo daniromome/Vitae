@@ -3,10 +3,11 @@ import { AboutMeService } from './about-me.service';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-about-me',
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-about-me',
+    templateUrl: './about-me.component.html',
+    styleUrls: ['./about-me.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class AboutMeComponent implements OnInit {
 
