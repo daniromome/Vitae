@@ -1,4 +1,4 @@
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 import { map, takeUntil } from 'rxjs/operators';
 import { environment } from './../../../environments/environment';
 import { Inquiry } from './inquiry.interface';

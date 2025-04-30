@@ -3,7 +3,7 @@ import { map, startWith, takeUntil, tap } from 'rxjs/operators';
 import { ContactService } from './contact.service';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { UntypedFormControl, Validators, UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 import { concat, timer, Observable, interval, from, Subject, BehaviorSubject } from 'rxjs';
 
 @Component({
