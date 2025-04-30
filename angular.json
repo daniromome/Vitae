@@ -83,21 +83,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Vitae:build"
+            "buildTarget": "Vitae:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Vitae:build:production"
+              "buildTarget": "Vitae:build:production"
             },
             "es": {
-              "browserTarget": "Vitae:build:es"
+              "buildTarget": "Vitae:build:es"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Vitae:build"
+            "buildTarget": "Vitae:build"
           }
         },
         "test": {
@@ -156,7 +156,7 @@
           "defaultConfiguration": ""
         },
         "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "options": {
             "browserTarget": "Vitae:build",
             "serverTarget": "Vitae:server"
@@ -169,7 +169,7 @@
           }
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "browserTarget": "Vitae:build:production",
             "serverTarget": "Vitae:server:production",
