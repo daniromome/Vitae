@@ -1,134 +1,148 @@
+@use 'sass:map';
 @use '@angular/material' as mat;
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap");
-@import 'mdi/mdi.scss';
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-// Defining our own color pallete.
-$dani9oo-primary: (
-  50: #fdecee,
-  100: #fbcfd4,
-  200: #f9afb7,
-  300: #f68e9a,
-  400: #f47685,
-  500: #f25e6f,
-  600: #f05667,
-  700: #ee4c5c,
-  800: #ec4252,
-  900: #e83140,
-  A100: #ffffff,
-  A200: #fff9f9,
-  A400: #ffc6ca,
-  A700: #ffadb2,
-  contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #000000,
-    600: #000000,
-    700: #ffffff,
-    800: #ffffff,
-    900: #ffffff,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
+// Note: Color palettes are generated from primary: #6112b3, secondary: #ffcd00, tertiary: #27203E
+$_palettes: (
+  primary: (
+    0: #000000,
+    10: #290055,
+    20: #450086,
+    25: #5400a0,
+    30: #6112b3,
+    35: #6d27bf,
+    40: #7a37cc,
+    50: #9454e7,
+    60: #ae71ff,
+    70: #c396ff,
+    80: #d8b9ff,
+    90: #eddcff,
+    95: #f8edff,
+    98: #fff7ff,
+    99: #fffbff,
+    100: #ffffff,
+  ),
+  secondary: (
+    0: #000000,
+    10: #241a00,
+    20: #3d2f00,
+    25: #4a3900,
+    30: #574500,
+    35: #655000,
+    40: #735c00,
+    50: #917400,
+    60: #b08d00,
+    70: #cfa600,
+    80: #f0c100,
+    90: #ffe089,
+    95: #ffefcc,
+    98: #fff8f0,
+    99: #fffbff,
+    100: #ffffff,
+  ),
+  tertiary: (
+    0: #000000,
+    10: #1e1734,
+    20: #332c4b,
+    25: #3e3756,
+    30: #4a4262,
+    35: #564e6f,
+    40: #625a7b,
+    50: #7b7295,
+    60: #958cb0,
+    70: #b0a6cc,
+    80: #ccc1e8,
+    90: #e8deff,
+    95: #f5eeff,
+    98: #fdf7ff,
+    99: #fffbff,
+    100: #ffffff,
+  ),
+  neutral: (
+    0: #000000,
+    10: #1e1a23,
+    20: #332e38,
+    25: #3e3943,
+    30: #4a454f,
+    35: #56505b,
+    40: #625c67,
+    50: #7b7580,
+    60: #958e9a,
+    70: #b0a8b4,
+    80: #ccc4d0,
+    90: #e8dfec,
+    95: #f7eefb,
+    98: #fff7ff,
+    99: #fffbff,
+    100: #ffffff,
+    4: #100d15,
+    6: #16121a,
+    12: #221e27,
+    17: #2d2831,
+    22: #38333c,
+    24: #3c3741,
+    87: #e0d7e4,
+    92: #eee5f2,
+    94: #f4ebf8,
+    96: #faf0fd,
+  ),
+  neutral-variant: (
+    0: #000000,
+    10: #1f1927,
+    20: #342e3c,
+    25: #403848,
+    30: #4b4453,
+    35: #574f5f,
+    40: #635b6c,
+    50: #7d7485,
+    60: #978d9f,
+    70: #b2a7ba,
+    80: #cec2d6,
+    90: #eadef2,
+    95: #f8edff,
+    98: #fff7ff,
+    99: #fffbff,
+    100: #ffffff,
+  ),
+  error: (
+    0: #000000,
+    10: #410002,
+    20: #690005,
+    25: #7e0007,
+    30: #93000a,
+    35: #a80710,
+    40: #ba1a1a,
+    50: #de3730,
+    60: #ff5449,
+    70: #ff897d,
+    80: #ffb4ab,
+    90: #ffdad6,
+    95: #ffedea,
+    98: #fff8f7,
+    99: #fffbff,
+    100: #ffffff,
   ),
 );
 
-$dani9oo-accent: (
-  50: #e1fbf8,
-  100: #b3f4ee,
-  200: #81ede2,
-  300: #4fe5d6,
-  400: #29e0ce,
-  500: #03dac5,
-  600: #03d6bf,
-  700: #02d0b8,
-  800: #02cbb0,
-  900: #01c2a3,
-  A100: #ebfffb,
-  A200: #b8fff2,
-  A400: #85ffe9,
-  A700: #6bffe4,
-  contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #000000,
-    600: #000000,
-    700: #000000,
-    800: #000000,
-    900: #000000,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
-  ),
+$_rest: (
+  secondary: map.get($_palettes, secondary),
+  neutral: map.get($_palettes, neutral),
+  neutral-variant: map.get($_palettes,  neutral-variant),
+  error: map.get($_palettes, error),
 );
 
-$custom-typography: mat.m2-define-legacy-typography-config(
-  $font-family: "Playfair Display",
-  $display-4: mat.m2-define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
-  $display-3: mat.m2-define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
-  $display-2: mat.m2-define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
-  $display-1: mat.m2-define-typography-level(34px, 40px, 400),
-  $headline: mat.m2-define-typography-level(24px, 32px, 400),
-  $title: mat.m2-define-typography-level(20px, 32px, 500),
-  $subheading-2: mat.m2-define-typography-level(16px, 28px, 400),
-  $subheading-1: mat.m2-define-typography-level(15px, 24px, 400),
-  $body-2: mat.m2-define-typography-level(14px, 24px, 500, "Lato"),
-  $body-1: mat.m2-define-typography-level(14px, 20px, 400, "Lato"),
-  $caption: mat.m2-define-typography-level(12px, 20px, 400, "Lato"),
-  $button: mat.m2-define-typography-level(14px, 14px, 500, "Lato"),
-  $input: mat.m2-define-typography-level(inherit, 1.125, 400, "Lato"),
-);
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
-//  The following line adds:
-//    1. Default typography styles for all components
-//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
-//  If you specify typography styles for the components you use elsewhere, you should delete this line.
-//  If you don't need the default component typographies but still want the hierarchy styles,
-//  you can delete this line and instead use:
-//    `@include mat.legacy-typography-hierarchy($custom-typography);`
-@include mat.all-legacy-component-typographies($custom-typography);
-@include mat.legacy-core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$Vitae-primary: mat.m2-define-palette($dani9oo-primary);
-$Vitae-accent: mat.m2-define-palette($dani9oo-accent, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$Vitae-warn: mat.m2-define-palette(mat.$m2-red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$Vitae-theme: mat.m2-define-dark-theme(
-  (
-    color: (
-      primary: $Vitae-primary,
-      accent: $Vitae-accent,
-      warn: $Vitae-warn,
-    ),
-  )
-);
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-legacy-component-themes($Vitae-theme);
+$primary-palette: map.merge(map.get($_palettes, primary), $_rest);
+$tertiary-palette: map.merge(map.get($_palettes, tertiary), $_rest);
 
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  color-scheme: light dark;
+  @include mat.theme((
+    color: $primary-palette,
+    typography: Manrope,
+    density: 0
+  ))
+}
 
 html,
 body {
@@ -140,10 +154,8 @@ body {
   font-family: Lato, "Helvetica Neue", sans-serif;
 }
 mat-card-content {
-  @extend .mat-body;
 }
 .vitae-caption {
-  @extend .mat-caption;
   text-transform: uppercase;
   color: rgba($color: #ffffff, $alpha: 0.6);
   max-height: 12px;
