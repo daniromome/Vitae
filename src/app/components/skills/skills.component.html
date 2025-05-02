@@ -1,0 +1,18 @@
+<mat-card>
+  <div class="vitae-card-title">
+    <h1 i18n>Skills</h1>
+  </div>
+  <mat-card-content>
+    @for (category of skillCategories; track $index) {
+      <p>{{ category.label }}</p>
+      <mat-chip-set>
+        @for (skill of category.skills; track $index) {
+          <mat-chip>
+            <mat-icon matChipAvatar svgIcon="vitae-{{ skill }}"/>
+            <div>{{ skill | titlecase }}</div>
+          </mat-chip>
+        }
+      </mat-chip-set>
+    }
+  </mat-card-content>
+</mat-card>

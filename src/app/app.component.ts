@@ -1,26 +1,44 @@
-import { PortfolioService } from './landing-page/portfolio/portfolio.service';
-import { SkillsService } from './landing-page/skills/skills.service';
-import { Component, OnInit } from '@angular/core';
-import { AboutMeService } from './landing-page/about-me/about-me.service';
+import { Component, inject, OnInit } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { fadeInAnimation, zoomInAnimation } from './_animations';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: false
+    animations: [
+      fadeInAnimation(),
+      zoomInAnimation()
+    ],
+    imports: [
+      MatCardModule,
+      MatButtonModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatSnackBarModule,
+      ReactiveFormsModule,
+      MatProgressBarModule,
+      AboutMeComponent, SkillsComponent, PortfolioComponent
+    ]
 })
-export class AppComponent implements OnInit {
-  title = 'Vitae';
+export class AppComponent {
 
-  constructor(
-    private skills: SkillsService,
-    private projects: PortfolioService,
-    private about: AboutMeService
-  ) {}
+  private readonly icons = ['angular', 'capacitor', 'cordova', 'github', 'ionic', 'java', 'linkedin', 'ngrx', 'ngxs', 'postgres', 'springboot', 'typescript'] as const;
 
-  ngOnInit(): void {
-    this.skills.init();
-    this.projects.init();
-    this.about.init();
+  constructor() {
+    const iconRegistry = inject(MatIconRegistry);
+    const sanitizer = inject(DomSanitizer);
+    this.icons.forEach(icon => iconRegistry.addSvgIcon(`vitae-${icon}`, sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/${icon}.svg`)))
   }
 }

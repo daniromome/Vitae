@@ -141,30 +141,33 @@ html {
     color: $primary-palette,
     typography: Manrope,
     density: 0
-  ))
+  ));
+  @media (prefers-color-scheme: dark) {
+    background-color: #121212;
+  }
 }
 
-html,
-body {
-  height: 100%;
-  background-color: #121212;
-}
 body {
   margin: 0;
-  font-family: Lato, "Helvetica Neue", sans-serif;
+  font-family: Manrope, "Helvetica Neue", sans-serif;
 }
-mat-card-content {
+
+.vitae-card-title {
+  padding: 1rem !important;
+  max-height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 56px;
+  @media only screen and (max-width: 398px) {
+    max-height: 102px;
+  }
 }
-.vitae-caption {
-  text-transform: uppercase;
-  color: rgba($color: #ffffff, $alpha: 0.6);
-  max-height: 12px;
-}
+
 .max-width { width: 100%; }
 
 i {
   font-size: 24px;
-  color: rgba(#ffffff, 100%);
   text-align: center;
   width: fit-content;
 }

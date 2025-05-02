@@ -1,0 +1,46 @@
+<mat-card>
+  <div class='vitae-card-title'>
+    <h1 class='mat-display-3' i18n>About me</h1>
+    <a href="/assets/fullpp.webp" target="_blank"><img [class.mat-elevation-z3]="true" src='../../../assets/pp.webp'
+        alt="Profile Picture"></a>
+  </div>
+  <mat-card-content>
+    <p i18n>
+      My name is Daniel Sánchez I was born
+      {{ age }}
+      {{ age | i18nPlural: {
+      '=0': durationStrings.plural.year,
+      '=1': durationStrings.singular.year,
+      'other': durationStrings.plural.year
+      } }}
+      ago and I am currently based in Jalisco, México
+      working fulltime as a hybrid mobile applications developer.
+      I have <strong> {{ experience.years }} {{ experience.years | i18nPlural: {
+        '=0': durationStrings.plural.year,
+        '=1': durationStrings.singular.year,
+        'other': durationStrings.plural.year
+        } }} and {{ experience.months }} {{ experience.months | i18nPlural: {
+        '=0': durationStrings.plural.month,
+        '=1': durationStrings.singular.month,
+        'other': durationStrings.plural.month
+        } }} of experience </strong> in the field. While most of my
+      expertise lies on frontend development I've worked on backends done
+      on java as well as nodejs that use sql databases it's also worth
+      mentioning that I am well aquainted with linux systems and the cloud.
+    </p>
+    <p i18n>
+      When it comes to my career I consider myself an enthusiast
+      since learning is one of the things I enjoy doing the most,
+      the implicit grow that you feel whenever you are thinkering
+      and experimenting with new tools or even mastering ones
+      you already know is something that I look forward to everyday.
+    </p>
+  </mat-card-content>
+  <mat-card-actions [style.margin-top]="'1rem'">
+    <a mat-raised-button href="https://github.com/Dani9OO" target="_blank" rel="noopener"><mat-icon
+        svgIcon="vitae-github" />GitHub</a>
+    <a mat-raised-button href="https://www.linkedin.com/in/daniel-sánchez-858827199" target="_blank"
+      rel="noopener"><mat-icon svgIcon="vitae-linkedin" />LinkedIn</a>
+    <a mat-raised-button href="/assets/cv.pdf" target="_blank"><mat-icon fontIcon="description" /> CV</a>
+  </mat-card-actions>
+</mat-card>

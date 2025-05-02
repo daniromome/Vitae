@@ -1,0 +1,32 @@
+<mat-card>
+  <div class="vitae-card-title">
+    <h1 class="mat-display-3" i18n>Portfolio</h1>
+  </div>
+  <mat-card-content>
+    <p i18n>I have two main projects deployed to production:</p>
+    <div class="projects-container">
+      @for (project of projects; track $index) {
+        <div class="project-container">
+          <div [class.mat-elevation-z3]="true" class="project-container-image" style="background-image: url({{project.image}});"></div>
+          <div class="project-container-overlay">
+            <div class="project-container-content">
+              <h1 class='mat-headline'><a href="{{project.url}}" target="_blank" rel="noreferrer">{{ project.title }}</a></h1>
+              <p>{{ project.summary }}</p>
+              <mat-icon svgIcon="vitae-github" (click)='newTab(project.repository)'/>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+    <p i18n>
+      Besides that, I have a java springboot (reactive) service that receives a webhook
+      whenever I make a purchase on my credit card and inserts the data into a postgres
+      database which I later query using metabase (an alternative to BI products out there)
+    </p>
+    <p i18n>
+      I also own a homelab in which I deploy half of my projects (the other half go to
+      an oracle cloud instance) that has provided quite a bit of experience in the linux
+      department.
+    </p>
+  </mat-card-content>
+</mat-card>

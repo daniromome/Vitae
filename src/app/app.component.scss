@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  @media only screen and (min-width: 1024px) {
+    height: calc(100dvh - 140px);
+    flex-direction: row;
+    padding: 70px;
+    gap: 70px;
+    align-items: center;
+  }
+}
